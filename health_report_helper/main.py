@@ -16,9 +16,9 @@ import utils
 if __name__ == '__main__':
     if len(sys.argv) > 1:
         config.data = json.loads(re.sub('#(.*)\n', '\n', sys.argv[1]).replace("'", '"'))
-    if utils.get_GMT8_timestamp() > utils.str_to_timestamp(config.data['deadline'], '%Y-%m-%d'):
-        logging.info("超出填报日期")
-        exit(-1)
+    #if utils.get_GMT8_timestamp() > utils.str_to_timestamp(config.data['deadline'], '%Y-%m-%d'):
+        #logging.info("超出填报日期")
+        #exit(-1)
     # retry mechanism
     for _ in range(5):
         try:
